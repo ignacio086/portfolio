@@ -20,7 +20,7 @@ export default function Tarjetas({nombre}){
         getData()
     },[nombre])
     return(
-        <div className=" w-1/2 h-3/4 border-2 border-gray-900 rounded flex flex-col justify-center items-center text-center">
+        <div className=" w-1/2 md:h-3/4 h-1/2 border-2 border-gray-900 rounded flex flex-col justify-center items-center text-center">
             <img src={datos.sprites.front_default} alt='imagen-pokemon'></img>
             <h1 className="uppercase">{datos.name}</h1>
             <p className="tex-sm">Peso:{datos.weight} kg</p>

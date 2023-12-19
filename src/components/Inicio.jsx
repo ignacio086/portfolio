@@ -6,7 +6,7 @@ export default function Inicio(){
     return(
         <div id='inicio'className="snap-center h-screen w-screen bg-white flex flex-row items-center justify-center">
         <motion.div initial={{x:-100 , opacity:0}} whileInView={{x:0, opacity:1}} transition={{duration:2}} viewport={{once:true}} className='h-2 bg-gray-900 w-1/3'></motion.div>
-        <motion.div initial={{opacity:0}} whileInView={{opacity:[0,0,1,1]}} transition={{duration:4}} viewport={{once:true}} className='h-2/3 bg-gray-900 w-1/3 rounded-full p-2'>
+        <motion.div initial={{opacity:0}} whileInView={{opacity:[0,0,1,1]}} transition={{duration:4}} viewport={{once:true}} className='h-1/5 w-2/4 md:h-2/3 bg-gray-900 md:w-1/3 rounded-full p-2'>
           <div className='h-full bg-white w-full rounded-full flex flex-col items-center justify-center text-center gap-2'>
             <h1 className="text-2xl">IGNACIO GOMEZ</h1>
             <h1>Web Developer</h1>
@@ -17,7 +17,7 @@ export default function Inicio(){
             </div>
           </div>
         </motion.div>
-        <motion.div initial={{x:100 , opacity:0}} whileInView={{x:0, opacity:1  }} viewport={{once:true}} transition={{duration:2 }}  className='h-2 bg-gray-900 w-1/3'></motion.div>
+        <motion.div initial={{x:100 , opacity:0}} whileInView={{x:0, opacity:1  }} viewport={{once:true}} transition={{duration:2 }}  className='h-2 bg-gray-900  w-1/3'></motion.div>
       </div>
     )
 }
