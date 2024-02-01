@@ -10,8 +10,8 @@ export default async function Home() {
   return (
     <main className="snap snap-y snap-mandatory overflow-scroll overflow-x-hidden w-screen h-screen">
       <Inicio/>
-      <About/>
       <Experiencia/>
+      <About/>
       <Pokeapi/>
     </main>
   )

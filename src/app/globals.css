@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.hovered-backdrop{
+    position: absolute;
+    inset: 0;
+    background: hsl(0deg 0% 100% / 0.2);
+    border-radius: 32px;
+    
+    background-color: rgba(0, 0, 0, 0.721)
+}

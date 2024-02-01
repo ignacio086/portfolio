@@ -9,7 +9,7 @@ export default function Inicio(){
         <motion.div initial={{opacity:0}} whileInView={{opacity:[0,0,1,1]}} transition={{duration:4}} viewport={{once:true}} className='h-1/5 w-2/4 md:h-2/3 bg-gray-900 md:w-1/3 rounded-full p-2'>
           <div className='h-full bg-white w-full rounded-full flex flex-col items-center justify-center text-center gap-2'>
             <h1 className="text-2xl">IGNACIO GOMEZ</h1>
-            <h1>Web Developer</h1>
+            <h1>NextJS Developer</h1>
             <div className="w-1/2 h-4 flex flex-row items-center justify-center gap-4">
               <Link className='hover:h-6 duration-100'href="https://github.com/ignacio086"><BsGithub/></Link>
               <Link className='hover:h-6 duration-100'href="https://www.instagram.com/igna_gomez93/"><BsInstagram/></Link>
