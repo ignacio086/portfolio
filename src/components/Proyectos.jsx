@@ -3,10 +3,8 @@
 "use client";
 
 import { Lato } from "next/font/google";
-import { Player } from "@lottiefiles/react-lottie-player";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import Link from "next/link";
 
 const lato = Lato({ subsets: ["latin"], weight: ["900"] });
 
@@ -34,7 +32,7 @@ export default function Proyectos() {
             className={`h-1/2 rounded-xl ${cuadro == "lay1" ? "" : "hidden"}`}
           ></img>
           <div className="flex gap-2">
-            <Link className={`p-2  bg-gradient-to-r from-gray-900 via-gray-900/70 to-gray-900/20 border-gray-900 border-2 rounded-xl ${cuadro == "lay1" ? "" : "hidden"}`} href='https://github.com/ignacio086/Laura-fotografia'>Repositorio</Link>
+            <a className={`p-2  bg-gradient-to-r from-gray-900 via-gray-900/70 to-gray-900/20 border-gray-900 border-2 rounded-xl ${cuadro == "lay1" ? "" : "hidden"}`} href='https://github.com/ignacio086/Laura-fotografia'>Repositorio</a>
           <button
             onClick={() => {
               setCuadro("lay1");
@@ -62,7 +60,7 @@ export default function Proyectos() {
             className={`h-1/2 rounded-xl ${cuadro == "lay2" ? "" : "hidden"}`}
           ></img>
           <div className="flex gap-2">
-            <Link className={` p-2  bg-gradient-to-r from-gray-900 via-gray-900/70 to-gray-900/20 border-gray-900 border-2 rounded-xl p-2 ${cuadro == "lay2" ? "" : "hidden"}`} href='https://g-stock.vercel.app/'>Web</Link>
+            <a className={` p-2  bg-gradient-to-r from-gray-900 via-gray-900/70 to-gray-900/20 border-gray-900 border-2 rounded-xl p-2 ${cuadro == "lay2" ? "" : "hidden"}`} href='https://g-stock.vercel.app/'>Web</a>
           <button
             onClick={() => {
               setCuadro("lay2");
@@ -89,7 +87,7 @@ export default function Proyectos() {
             className={`h-1/2 rounded-xl ${cuadro == "lay3" ? "" : "hidden"}`}
           ></img>
           <div className="flex gap-2">
-            <Link className={`p-2  bg-gradient-to-r from-gray-900 via-gray-900/70 to-gray-900/20 border-gray-900 border-2 rounded-xl ${cuadro == "lay3" ? "" : "hidden"}`} href='https://github.com/ignacio086/e-commerce'>Repositorio</Link>
+            <a className={`p-2  bg-gradient-to-r from-gray-900 via-gray-900/70 to-gray-900/20 border-gray-900 border-2 rounded-xl ${cuadro == "lay3" ? "" : "hidden"}`} href='https://github.com/ignacio086/e-commerce'>Repositorio</a>
           <button
             onClick={() => {
               setCuadro("lay3");
@@ -116,7 +114,7 @@ export default function Proyectos() {
             className={`h-1/2 rounded-xl ${cuadro == "lay4" ? "" : "hidden"}`}
           ></img>
           <div className="flex gap-2">
-            <Link className={` bg-gradient-to-r from-gray-900 via-gray-900/70 to-gray-900/20 border-gray-900 border-2 rounded-xl p-2 ${cuadro == "lay4" ? "" : "hidden"}`} href='https://github.com/ignacio086/Task-app'>Repositorio</Link>
+            <a className={` bg-gradient-to-r from-gray-900 via-gray-900/70 to-gray-900/20 border-gray-900 border-2 rounded-xl p-2 ${cuadro == "lay4" ? "" : "hidden"}`} href='https://github.com/ignacio086/Task-app'>Repositorio</a>
           <button
             onClick={() => {
               setCuadro("lay4");
