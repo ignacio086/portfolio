@@ -76,14 +76,14 @@ export default function Contacto() {
             </button>
           </div>
           <Link
-            href="/Ignacio Gomez(es) - NextJS _ React _ JavaScript _ Web Developer - CV.pdf"
+            href="/Ignacio Gomez(es) - NextJS _ React _ JavaScript _ Web Developer - CV port.pdf"
             style={lato.style}
             className="w-1/2 rounded-xl p-2 bg-slate-100/20 border-b-2 border-r-2 border-gray-900 text-center"
           >
             Descargar Curriculum Vitae-es
           </Link>
           <Link
-            href="/Ignacio Gomez(en) - NextJS _ React _ JavaScript _ Web Developer - CV.pdf"
+            href="/Ignacio Gomez(en) - NextJS _ React _ JavaScript _ Web Developer - CV port.pdf"
             style={lato.style}
             className="w-1/2 rounded-xl p-2 bg-slate-100/20 border-b-2 border-r-2 border-gray-900 text-center"
           >
