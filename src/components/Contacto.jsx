@@ -52,12 +52,12 @@ export default function Contacto() {
               <SiGithub />
             </a>
             <a
-              href="www.linkedin.com/in/ignaciogomez-devfullstack"
+              href="https://www.linkedin.com/in/ignaciogomez-devfullstack"
               className="text-xl"
             >
               <SiLinkedin />
             </a>
-            <a href="www.instagram.com/igna_gomez93" className="text-xl">
+            <a href="https://www.instagram.com/igna_gomez93" className="text-xl">
               <SiInstagram />
             </a>
             <a
