@@ -1,18 +1,22 @@
-import Experiencia from "@/components/Experiencia"
-import About from "@/components/About"
-import Inicio from "@/components/Inicio"
-import Pokeapi from "@/components/Pokeapi"
+"use client";
 
+import { Lato } from "next/font/google";
+import Inicio from "@/components/Inicio";
+import Experiencia from "@/components/Experiencia";
+import Soft from "@/components/Soft";
+import Proyectos from "@/components/Proyectos";
+import Contacto from "@/components/Contacto";
 
+const lato = Lato({ subsets: ["latin"], weight: ["900"] });
 
-
-export default async function Home() {
+export default function Home() {
   return (
-    <main className="snap snap-y snap-mandatory overflow-scroll overflow-x-hidden w-screen h-screen">
+    <main className=" w-screen h-screen bg-sky-500">
       <Inicio/>
       <Experiencia/>
-      <About/>
-      <Pokeapi/>
+      <Soft/>
+      <Proyectos/>
+      <Contacto/>
     </main>
-  )
+  );
 }

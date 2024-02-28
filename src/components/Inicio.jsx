@@ -1,23 +1,94 @@
-'use client'
-import Link from "next/link"
-import {BsInstagram , BsLinkedin , BsGithub } from 'react-icons/bs'
-import { motion } from "framer-motion"
-export default function Inicio(){
-    return(
-        <div id='inicio'className="snap-center h-screen w-screen bg-white flex flex-row items-center justify-center">
-        <motion.div initial={{x:-100 , opacity:0}} whileInView={{x:0, opacity:1}} transition={{duration:2}} viewport={{once:true}} className='h-2 bg-gray-900 w-1/3'></motion.div>
-        <motion.div initial={{opacity:0}} whileInView={{opacity:[0,0,1,1]}} transition={{duration:4}} viewport={{once:true}} className='h-1/5 w-2/4 md:h-2/3 bg-gray-900 md:w-1/3 rounded-full p-2'>
-          <div className='h-full bg-white w-full rounded-full flex flex-col items-center justify-center text-center gap-2'>
-            <h1 className="text-2xl">IGNACIO GOMEZ</h1>
-            <h1>NextJS Developer</h1>
-            <div className="w-1/2 h-4 flex flex-row items-center justify-center gap-4">
-              <Link className='hover:h-6 duration-100'href="https://github.com/ignacio086"><BsGithub/></Link>
-              <Link className='hover:h-6 duration-100'href="https://www.instagram.com/igna_gomez93/"><BsInstagram/></Link>
-              <Link className='hover:h-6 duration-100'href="www.linkedin.com/in/ignacio-gomez-91b838237"><BsLinkedin/></Link>
-            </div>
-          </div>
+"use client";
+import {
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+  SiTailwindcss,
+  SiNestjs,
+} from "react-icons/si";
+import { Lato } from "next/font/google";
+import { TbArrowBigDownLinesFilled } from "react-icons/tb";
+import { Player } from "@lottiefiles/react-lottie-player";
+import { motion } from "framer-motion";
+import Link from "next/link";
+
+const lato = Lato({ subsets: ["latin"], weight: ["900"] });
+
+export default function Inicio() {
+  return (
+    <section id="inicio" className=" w-screen h-screen bg-sky-500 flex">
+      <div className="h-screen w-1/2 p-24 text-white flex flex-col  justify-between">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="shadow-xl rounded-xl w-fit p-2"
+        >
+          <h1 className="text-9xl " style={lato.style}>
+            IGNACIO
+          </h1>
+          <h1 className="text-9xl" style={lato.style}>
+            GOMEZ
+          </h1>
         </motion.div>
-        <motion.div initial={{x:100 , opacity:0}} whileInView={{x:0, opacity:1  }} viewport={{once:true}} transition={{duration:2 }}  className='h-2 bg-gray-900  w-1/3'></motion.div>
+        <div className="w-full text-center gap-2 flex flex-col text-xl ">
+          <motion.p
+            initial={{ opacity: 0, x: -200 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            Full-stack developer
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, x: -200 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="w-full flex flex-col gap-2"
+          >
+            <p>Next.js | React | Typescript | TailwindCSS | NestJS</p>
+            <div className=" w-full flex justify-evenly">
+              <SiNextdotjs />
+              <SiReact />
+              <SiTypescript />
+              <SiTailwindcss />
+              <SiNestjs />
+            </div>
+          </motion.div>
+        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="flex flex-col gap-2 items-center justify-center"
+        >
+          <Link
+            href="#"
+            className=" hover:bg-sky-500 hover:text-white hover:border-2 hover:border-white border-2 border-sky-500 bg-white rounded-xl text-sky-500 text-s p-2 w-fit "
+          >
+            Conoceme
+          </Link>
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 1, repeat: "infinity" }}
+          >
+            <TbArrowBigDownLinesFilled />
+          </motion.div>
+        </motion.div>
       </div>
-    )
+      <motion.div
+        initial={{ opacity: 0, x: 200 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 2 }}
+        className="h-screen w-1/2  p-24 flex items-center justify-center"
+      >
+        <Player
+          src="https://lottie.host/6a497038-43e1-4262-8875-13a58adb3b38/USlUjY1LSm.json"
+          style={{ width: "100%", height: "100%" }}
+          autoplay
+          loop
+        />
+      </motion.div>
+    </section>
+  );
 }

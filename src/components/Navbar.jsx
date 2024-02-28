@@ -1,45 +1,57 @@
 "use client";
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { useId, useState } from "react";
-
+import Link from "next/link";
+import {
+  TbHome,
+  TbFriends,
+  TbPhone,
+  TbFolder,
+  TbBackhoe,
+} from "react-icons/tb";
 export default function Navbar() {
-  const Links = [
-    {
-      ref: "#inicio",
-      label: "Inicio",
-    },
-    {
-      ref: "#trabajos",
-      label: "Trabajos",
-    },
-    {
-      ref: "#sobremi",
-      label: "Sobre mi",
-    },
-    { ref: "#api", label: "APIs" },
-  ];
-  const [sobre, setSobre] = useState(null);
-  const id = useId();
   return (
-    <nav
-      className="h-12 bg-gray-0 w-screen fixed flex flex-row items-center justify-center gap-10"
-      onMouseLeave={() => setSobre(null)}
+    <motion.nav
+      initial={{ opacity: 0, y: 0 }}
+      animate={{ opacity: 1, y: 10 }}
+      transition={{ duration: 1 }}
+      className="flex items-center justify-center w-full rounded-xl z-20 fixed top-0 "
     >
-      <ul className="h-12 p-0 bg-gray-0 w-screen fixed flex flex-row items-center justify-center gap-10">
-        {Links.map(({ label, ref }) => (
-          <motion.li key={label} whileHover={{ scale: 1.2 }}>
-            <a href={ref}>{label}</a>
-          </motion.li>
-        ))}
+      <ul className="flex justify-evenly items-center text-xl bg-white text-sky-500 w-1/3 rounded-xl border-2 border-sky-700 p-2 ">
+        <Link
+          href="#inicio"
+          className="hover:scale-125 hover:bg-sky-500 rounded-full hover:text-white p-4 transition"
+        >
+          <TbHome />
+        </Link>
+        <span>|</span>
+        <Link
+          href="#experiencia"
+          className="hover:scale-125  hover:bg-sky-500 rounded-full hover:text-white p-4 transition"
+        >
+          <TbBackhoe />
+        </Link>
+        <span>|</span>
+        <Link
+          href="#soft"
+          className="hover:scale-125 hover:bg-sky-500 rounded-full hover:text-white p-4 transition"
+        >
+          <TbFriends />
+        </Link>
+        <span>|</span>
+        <Link
+          href="#proyectos"
+          className="hover:scale-125 hover:bg-sky-500 rounded-full hover:text-white p-4 transition"
+        >
+          <TbFolder />
+        </Link>
+        <span>|</span>
+        <Link
+          href="#contacto"
+          className="hover:scale-125 hover:bg-sky-500 rounded-full hover:text-white p-4 transition"
+        >
+          <TbPhone />
+        </Link>
       </ul>
-    </nav>
+    </motion.nav>
   );
 }
-
-//<nav className='h-12 bg-gray-0 w-screen fixed flex flex-row items-center justify-center gap-10'>
-//          <motion.a className='hover:text-base text-sm duration-100' onMouseEnter={()=>{setSobre(true)}} href='#inicio'>Inicio</motion.a>
-//          <motion.a className='hover:text-base text-sm duration-100' href='#sobremi'>Sobre mi</motion.a>
-//          <motion.a className='hover:text-base text-sm duration-100' href='#experiencia'>Experiencia</motion.a>
-//          <motion.a className='hover:text-base text-sm duration-100' href='#api'>APIs</motion.a>
-//</nav>

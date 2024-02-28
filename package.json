@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lottiefiles/react-lottie-player": "^3.5.3",
     "framer-motion": "^10.16.5",
+    "keep-react": "^1.1.2",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
