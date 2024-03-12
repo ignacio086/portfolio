@@ -18,7 +18,7 @@ export default function Contacto({lang}) {
   return (
     <section
       id="contacto"
-      className="w-screen flex lg:flex-row flex-col gap-24 justify-center h-screen bg-slate-200 p-8 lg:p-24"
+      className="w-screen flex lg:flex-row pt-60 lg:pt-0 flex-col gap-24 justify-center h-screen bg-slate-200 p-8 lg:p-24"
     >
       <motion.h1
         initial={{ opacity: 0, y: 200 }}
