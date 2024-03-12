@@ -1,4 +1,4 @@
-"use client";
+
 
 import { Lato } from "next/font/google";
 import Inicio from "@/components/Inicio";
@@ -9,14 +9,15 @@ import Contacto from "@/components/Contacto";
 
 const lato = Lato({ subsets: ["latin"], weight: ["900"] });
 
-export default function Home() {
+export default async function Home({params}) {
+  const diccionario = await import(`@/dictionaries/${params.lang}.json`).then(m=>m.default)
   return (
     <main className=" w-screen h-screen bg-sky-500">
-      <Inicio/>
-      <Experiencia/>
-      <Soft/>
-      <Proyectos/>
-      <Contacto/>
+      <Inicio lang={diccionario.inicio}/>
+      <Experiencia lang={diccionario.experiencia}/>
+      <Soft lang={diccionario.soft}/>
+      <Proyectos lang={diccionario.proyectos}/>
+      <Contacto lang={diccionario.contact}/>
     </main>
   );
 }

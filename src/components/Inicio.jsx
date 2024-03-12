@@ -14,24 +14,24 @@ import Link from "next/link";
 
 const lato = Lato({ subsets: ["latin"], weight: ["900"] });
 
-export default function Inicio() {
+export default function Inicio({lang}) {
   return (
-    <section id="inicio" className=" w-screen h-screen bg-sky-500 flex">
-      <div className="h-screen w-1/2 p-24 text-white flex flex-col  justify-between">
+    <section id="inicio" className=" w-screen h-screen mt-20 lg:mt-0 bg-sky-500 flex flex-col lg:flex-row">
+      <div className="h-screen w-full lg:w-1/2 p-2 lg:p-24 text-white flex flex-col  justify-between">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
           className="shadow-xl rounded-xl w-fit p-2"
         >
-          <h1 className="text-9xl " style={lato.style}>
+          <h1 className="text-6xl lg:text-9xl " style={lato.style}>
             IGNACIO
           </h1>
-          <h1 className="text-9xl" style={lato.style}>
+          <h1 className="text-6xl lg:text-9xl" style={lato.style}>
             GOMEZ
           </h1>
         </motion.div>
-        <div className="w-full text-center gap-2 flex flex-col text-xl ">
+        <div className="w-full text-center gap-2 flex flex-col lg:text-xl text-md ">
           <motion.p
             initial={{ opacity: 0, x: -200 }}
             animate={{ opacity: 1, x: 0 }}
@@ -45,7 +45,7 @@ export default function Inicio() {
             transition={{ duration: 1, delay: 0.5 }}
             className="w-full flex flex-col gap-2"
           >
-            <p>Next.js | React | Typescript | TailwindCSS | NestJS</p>
+            <p className=" ">Next.js | React | Typescript | TailwindCSS | NestJS</p>
             <div className=" w-full flex justify-evenly">
               <SiNextdotjs />
               <SiReact />
@@ -65,7 +65,7 @@ export default function Inicio() {
             href="#"
             className=" hover:bg-sky-500 hover:text-white hover:border-2 hover:border-white border-2 border-sky-500 bg-white rounded-xl text-sky-500 text-s p-2 w-fit "
           >
-            Conoceme
+            {lang.boton}
           </Link>
           <motion.div
             initial={{ y: 0 }}
@@ -80,7 +80,7 @@ export default function Inicio() {
         initial={{ opacity: 0, x: 200 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 2 }}
-        className="h-screen w-1/2  p-24 flex items-center justify-center"
+        className="h-screen w-full lg:w-1/2 p-8 lg:p-24 flex items-center justify-center"
       >
         <Player
           src="https://lottie.host/6a497038-43e1-4262-8875-13a58adb3b38/USlUjY1LSm.json"

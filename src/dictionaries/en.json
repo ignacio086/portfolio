@@ -1,0 +1,44 @@
+{
+ "inicio":{
+  "boton":"Know me"
+ },
+ "experiencia":{
+  "title":"EXPERIENCE",
+  "boton":"Learn more",
+  "sub":"Video recorded with my students from Mendoza Futura",
+  "firstfecha":"April 2022 - August 2023",
+  "firsttitle":"Mendoza Futura Professor",
+  "firstcontent":"I taught web programming classes in the town of Lavalle, Mendoza, as part of the Mendoza Futura program.",
+  "secondfecha":"April 2021 - April 2023",
+  "secondtitle":"CTO TribÜ Sustentable",
+  "secondcontent":"I carried out the creation, optimization, and organization of the Tribü e-commerce, which offered sustainable products from native ventures in my province.",
+  "thirdfecha":"February 2021 - Present",
+  "thirdtitle":"Mendoza Futura Professor",
+  "thirdcontent":"I have created websites for various clients, thus increasing their visibility on the internet. Additionally, I have created stock applications and business managers to increase their performance."
+ },
+ "soft":{
+  "title":"Soft Skills",
+  "firsttitle":"GOOD COMMUNICATION",
+  "firstcontent":"Able to share ideas, thoughts, knowledge, and information in the most understandable way for my colleagues, using clarity, empathy, and active listening.",
+  "secondtitle":"TEAMWORK",
+  "secondcontent":"Able to actively participate, contributing ideas to achieve a common goal, subordinating personal interests to the team's objectives.",
+  "thirdtitle":"FAST LEARNING",
+  "thirdcontent":"Able to acquire and process new information effectively and efficiently, not only academic learning, but also applied to situations in daily and professional life.",
+  "fourthtitle":"PROACTIVE",
+  "fourthcontent":"Able to take my own responsibility, take the initiative, and in certain challenging situations, have a clearly anticipatory behavior, seeking possible solutions and consequent actions."
+ },
+ "proyectos":{
+  "title":"PROJECTS",
+  "boton":"More info",
+  "repo":"Repository",
+  "webcontent":"Website created with HTML5, CSS3, JavaScript, and React, aimed at promoting a crazy photographer.",
+  "stockcontent":"Stock and sales manager made with Next.js and MySQL, capable of organizing products, sales, and business audits through an API created and consumed with Next.js.",
+  "ecommercecontent":"E-commerce project made with T3 stack, capable of running a business digitally, with payment methods and a shopping cart.",
+  "taskcontent":"Essential ToDoApp task application. Made with Next.js and MongoDB, a small CRUD test."
+ },
+ "contact":{
+  "title":"CONTACT",
+  "endownload":"Download Curriculum Vitae-en",
+  "esdownload":"Download Curriculum Vitae-es"
+ }
+}

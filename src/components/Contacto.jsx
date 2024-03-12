@@ -14,29 +14,29 @@ import { TbArrowDown, TbMail } from "react-icons/tb";
 
 const lato = Lato({ subsets: ["latin"], weight: ["900"] });
 
-export default function Contacto() {
+export default function Contacto({lang}) {
   return (
     <section
       id="contacto"
-      className="w-screen flex gap-24 justify-center h-screen bg-slate-200 p-24"
+      className="w-screen flex lg:flex-row flex-col gap-24 justify-center h-screen bg-slate-200 p-8 lg:p-24"
     >
       <motion.h1
         initial={{ opacity: 0, y: 200 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="letra"
+        className="text-4xl letra lg:text-8xl"
         style={lato.style}
       >
         {" "}
-        Contacto
+        {lang.title}
       </motion.h1>
       <motion.div
         initial={{ opacity: 0, y: 200 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="rounded-xl bg-sky-500 border-2 border-gray-900  w-1/2 h-full"
+        className="rounded-xl bg-sky-500 border-2 border-gray-900  w-full lg:w-1/2 h-full"
       >
         <div className="rounded-xl flex flex-col items-center justify-evenly bg-slate-100/20 backdrop-blur-xl w-full h-full">
           <h1 className="text-5xl text-white" style={lato.style}>
@@ -80,14 +80,14 @@ export default function Contacto() {
             style={lato.style}
             className="w-1/2 rounded-xl p-2 bg-slate-100/20 border-b-2 border-r-2 border-gray-900 text-center"
           >
-            Descargar Curriculum Vitae-es
+            {lang.esdownload}
           </Link>
           <Link
             href="/Ignacio Gomez(en) - NextJS _ React _ JavaScript _ Web Developer - CV port.pdf"
             style={lato.style}
             className="w-1/2 rounded-xl p-2 bg-slate-100/20 border-b-2 border-r-2 border-gray-900 text-center"
           >
-            Descargar Curriculum Vitae-en
+            {lang.endownload}
           </Link>
         </div>
       </motion.div>

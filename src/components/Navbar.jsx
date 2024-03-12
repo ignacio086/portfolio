@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { Toggle } from "keep-react";
 import Link from "next/link";
 import {
   TbHome,
@@ -8,6 +9,8 @@ import {
   TbFolder,
   TbBackhoe,
 } from "react-icons/tb";
+import ToggleSwitch from "./Toggle";
+
 export default function Navbar() {
   return (
     <motion.nav
@@ -16,7 +19,7 @@ export default function Navbar() {
       transition={{ duration: 1 }}
       className="flex items-center justify-center w-full rounded-xl z-20 fixed top-0 "
     >
-      <ul className="flex justify-evenly items-center text-xl bg-white text-sky-500 w-1/3 rounded-xl border-2 border-sky-700 p-2 ">
+      <ul className="flex justify-evenly items-center text-xl bg-white text-sky-500 w-3/4 lg:w-1/3 rounded-xl border-2 border-sky-700 p-2 ">
         <Link
           href="#inicio"
           className="hover:scale-125 hover:bg-sky-500 rounded-full hover:text-white p-4 transition"
@@ -51,6 +54,8 @@ export default function Navbar() {
         >
           <TbPhone />
         </Link>
+        <span>|</span>
+        <ToggleSwitch/>
       </ul>
     </motion.nav>
   );
