@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+  scroll-behavior: smooth;
+}
 .letra {
   line-height: 1;
   text-shadow: -10px -1px 0px white;
