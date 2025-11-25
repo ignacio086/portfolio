@@ -1,4 +1,5 @@
-'use client'
+"use client"
+
 import Inicio from "./components/Inicio";
 import Nav from "./components/Nav";
 import Inter from "./components/Inter";

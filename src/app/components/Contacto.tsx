@@ -1,5 +1,6 @@
 "use client";
-import { Player } from "@lottiefiles/react-lottie-player";
+
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { Oswald } from "next/font/google";
 import Link from "next/link";
@@ -11,6 +12,15 @@ import {
   IoLogoWhatsapp,
 } from "react-icons/io";
 import { IoLogoGithub } from "react-icons/io5";
+
+// ⬇️ import dinámico del Player, solo en cliente
+const Player = dynamic(
+  () =>
+    import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
+  {
+    ssr: false,
+  }
+);
 
 const oswald = Oswald({ subsets: ["latin"] });
 
@@ -30,14 +40,14 @@ export default function Contacto() {
       >
         GRACIAS POR VER ESTE PORTFOLIO.
       </motion.div>
-      <div className="w-screen p-8  h-auto flex flex-col gap-20 ">
+      <div className="w-screen p-8 h-auto flex flex-col gap-20">
         <motion.h1
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 2 }}
           viewport={{ once: true }}
           style={oswald.style}
-          className=" text-7xl lg:text-9xl text-nuevo-500"
+          className="text-7xl lg:text-9xl text-nuevo-500"
         >
           CONTACTO
         </motion.h1>
@@ -57,6 +67,7 @@ export default function Contacto() {
               WHATSAPP
             </Link>
           </div>
+
           <div className="flex flex-col items-center justify-center gap-2 h-40 w-1/5">
             <Player
               src="https://lottie.host/480ff09e-4a78-466d-95b5-3ed98d739a4b/t1mMeQNyTA.json"
@@ -72,6 +83,7 @@ export default function Contacto() {
               GITHUB
             </Link>
           </div>
+
           <div className="flex flex-col items-center justify-center gap-2 h-40 w-1/5">
             <Player
               src="https://lottie.host/4a420bd4-33f1-439f-877e-4d25312e0614/TDY4a9hPwA.json"
@@ -87,6 +99,7 @@ export default function Contacto() {
               LINKEDIN
             </Link>
           </div>
+
           <div className="flex flex-col items-center justify-center gap-2 h-40 w-1/5">
             <Player
               src="https://lottie.host/116bdb3b-87ee-4c4f-9082-a6c60325a527/VnoMvPi05P.json"
@@ -102,6 +115,7 @@ export default function Contacto() {
               CORREO
             </Link>
           </div>
+
           <div className="flex flex-col items-center justify-center gap-2 h-40 w-1/5">
             <Player
               src="https://lottie.host/93d97c2b-b425-4005-b472-28b02f09a9e7/rfnJnz7fUr.json"
