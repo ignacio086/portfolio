@@ -110,7 +110,7 @@ export default function Contacto() {
               loop
             />
             <Link
-              href="/Ignacio Gomez(es) - NextJS _ React _ JavaScript _ Web Developer - CV port.pdf"
+              href="/Ignacio Gomez(es) - Analista de Datos _ React _ JavaScript _ Web Developer - CV port.pdf"
               className="text-nuevo-100 border-2 bg-nuevo-300 border-slate-300 p-2 rounded-xl text-xs cursor-pointer transition hover:bg-nuevo-100 hover:text-nuevo-500 hover:border-nuevo-500 w-32 text-center flex gap-2"
             >
               <FaPaperclip className="h-full text-lg" />
